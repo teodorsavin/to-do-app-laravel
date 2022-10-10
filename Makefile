@@ -14,5 +14,10 @@ install: ## Runs composer install, and sail up (docker-compose up), migrations a
 	./vendor/bin/sail artisan migrate
 	./vendor/bin/sail artisan db:seed --class=UserSeeder
 
+.PHONY: serve
+serve: ## Runs sail up (docker-compose up)
+	./vendor/bin/sail up -d
+
+.PHONY: composer
 composer: ## Runs composer install
 	composer install
