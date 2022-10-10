@@ -14,16 +14,9 @@ return new class () extends Migration {
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
-
-            if (Schema::hasTable('users')) {
-                $table->foreignId('user_id')
-                    ->constrained('users')
-                    ->cascadeOnUpdate()
-                    ->restrictOnDelete();
-            }
-
             $table->string('name', 255);
             $table->text('description')->nullable();
+            $table->boolean('completed')->default(false);
             $table->timestamps();
         });
     }

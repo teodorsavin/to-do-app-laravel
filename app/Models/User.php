@@ -3,11 +3,47 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Builder as BuilderAlias;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * App\Models\User
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property \Illuminate\Support\Carbon|null $email_verified_at
+ * @property string $password
+ * @property string|null $two_factor_secret
+ * @property string|null $two_factor_recovery_codes
+ * @property string|null $two_factor_confirmed_at
+ * @property string|null $remember_token
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Sanctum\PersonalAccessToken[] $tokens
+ * @property-read int|null $tokens_count
+ * @method static \Database\Factories\UserFactory factory(...$parameters)
+ * @method static BuilderAlias|User newModelQuery()
+ * @method static BuilderAlias|User newQuery()
+ * @method static BuilderAlias|User query()
+ * @method static BuilderAlias|User whereCreatedAt($value)
+ * @method static BuilderAlias|User whereEmail($value)
+ * @method static BuilderAlias|User whereEmailVerifiedAt($value)
+ * @method static BuilderAlias|User whereId($value)
+ * @method static BuilderAlias|User whereName($value)
+ * @method static BuilderAlias|User wherePassword($value)
+ * @method static BuilderAlias|User whereRememberToken($value)
+ * @method static BuilderAlias|User whereTwoFactorConfirmedAt($value)
+ * @method static BuilderAlias|User whereTwoFactorRecoveryCodes($value)
+ * @method static BuilderAlias|User whereTwoFactorSecret($value)
+ * @method static BuilderAlias|User whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class User extends Authenticatable
 {
     use HasApiTokens;
