@@ -28,6 +28,14 @@ This is in order to avoid cors problems and in order for Laravel sanctum to work
 `api.todo.local` is for this api, while `app.todo.local` is for the frontend part
 
 Finally, to run it execute the following command
+This will also run the project as well.
 ```
 make install
 ```
+
+After install you can only run
+```
+make serve
+```
+
+the api will be available at [api.todo.local](http://api.todo.local)
