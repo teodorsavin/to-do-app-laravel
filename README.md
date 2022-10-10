@@ -17,7 +17,7 @@ For this To do app I used the following technologies:
 - [Laravel sail for docker management](https://laravel.com/docs/9.x/sail).
 - MySQL for data storage
 
-## Running the app
+### Running the app
 
 Before running the app I suggest you to add the following in your `/etc/hosts`
 ```
@@ -26,6 +26,8 @@ Before running the app I suggest you to add the following in your `/etc/hosts`
 ```
 This is in order to avoid cors problems and in order for Laravel sanctum to work. 
 `api.todo.local` is for this api, while `app.todo.local` is for the frontend part
+
+Also, please make sure `Docker` is installed on your system and is running
 
 Finally, to run it execute the following command
 This will also run the project as well.
